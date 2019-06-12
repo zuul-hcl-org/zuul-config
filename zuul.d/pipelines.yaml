@@ -15,6 +15,7 @@
           action: comment
           comment: (?i)^\s*recheck\s*$
         - event: push
+        - event: create
     start:
       github:
         status: pending
@@ -22,13 +23,10 @@
     success:
       github:
         status: 'success'
-        review: 'approve'
         label: 'passed'
       mysql:  
     failure:
       github:
         status: 'failure'
-        review: 'comment'
-        review-body: 'Review Failed'
         label: 'failed'
       mysql:
