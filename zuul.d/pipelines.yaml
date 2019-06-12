@@ -15,7 +15,6 @@
           action: comment
           comment: (?i)^\s*recheck\s*$
         - event: push
-        - event: create
     start:
       github:
         status: pending
