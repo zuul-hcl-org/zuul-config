@@ -1,0 +1,6 @@
+- project:
+    name: ^.*$
+    check:
+      jobs: []
+    gate:
+      jobs: []
