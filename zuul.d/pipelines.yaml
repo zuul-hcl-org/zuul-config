@@ -21,8 +21,13 @@
     success:
       github:
         status: 'success'
+        review: 'approve'
+        label: 'passed'
       mysql:  
     failure:
       github:
         status: 'failure'
+        review: 'comment'
+        review-body: 'Review Failed'
+        label: 'failed'
       mysql:
