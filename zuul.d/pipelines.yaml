@@ -39,10 +39,7 @@
     trigger:
       github:        
         - event: pull_request
-          action:
-            - opened
-            - changed
-            - reopened
+          action:   
             - labeled
         - event: pull_request
           action: labeled
@@ -73,9 +70,7 @@
       github:        
         - event: pull_request
           action:
-            - opened
-            - changed
-            - reopened           
+            - labeled                                 
         - event: pull_request
           action: comment
           comment: (?i)^\s*US\s*$
