@@ -43,9 +43,10 @@
             - opened
             - changed
             - reopened
+            - labeled
         - event: pull_request
-          action: comment
-          comment: (?i)^\s*India\s*$
+          action: labeled
+          labeled: (?i)^\s*India\s*$
         
     start:
       github:
@@ -74,7 +75,7 @@
           action:
             - opened
             - changed
-            - reopened
+            - reopened           
         - event: pull_request
           action: comment
           comment: (?i)^\s*US\s*$
