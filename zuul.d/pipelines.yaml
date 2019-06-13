@@ -29,3 +29,66 @@
         status: 'failure'
         label: 'failed'
       mysql:
+- pipeline:
+    name: region1
+    description: |
+      Newly opened pull requests originating from India enter this pipeline to receive an
+      initial verification test
+    manager: independent
+    trigger:
+      github:        
+        - event: pull_request
+          action:
+            - opened
+            - changed
+            - reopened
+        - event: pull_request
+          action: label
+          label: (?i)^\s*India\s*$
+        
+    start:
+      github:
+        status: pending
+        comment: false
+    success:
+      github:
+        status: 'success'
+        label: 'passed'
+      mysql:  
+    failure:
+      github:
+        status: 'failure'
+        label: 'failed'
+      mysql:
+
+- pipeline:
+    name: region2
+    description: |
+      Newly opened pull requests originating from US enter this pipeline to receive an
+      initial verification test
+    manager: independent
+    trigger:
+      github:        
+        - event: pull_request
+          action:
+            - opened
+            - changed
+            - reopened
+        - event: pull_request
+          action: label
+          label: (?i)^\s*US\s*$
+        
+    start:
+      github:
+        status: pending
+        comment: false
+    success:
+      github:
+        status: 'success'
+        label: 'passed'
+      mysql:  
+    failure:
+      github:
+        status: 'failure'
+        label: 'failed'
+      mysql:
