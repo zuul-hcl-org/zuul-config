@@ -29,6 +29,7 @@
         status: 'failure'
         label: 'failed'
       mysql:
+      
 - pipeline:
     name: region1
     description: |
