@@ -43,8 +43,8 @@
             - changed
             - reopened
         - event: pull_request
-          action: label
-          label: (?i)^\s*India\s*$
+          action: comment
+          comment: (?i)^\s*India\s*$
         
     start:
       github:
@@ -75,8 +75,8 @@
             - changed
             - reopened
         - event: pull_request
-          action: label
-          label: (?i)^\s*US\s*$
+          action: comment
+          comment: (?i)^\s*US\s*$
         
     start:
       github:
