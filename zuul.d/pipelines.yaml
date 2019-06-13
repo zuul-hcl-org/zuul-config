@@ -46,7 +46,7 @@
             - labeled
         - event: pull_request
           action: labeled
-          labeled: (?i)^\s*India\s*$
+          label: (?i)^\s*India\s*$
         
     start:
       github:
