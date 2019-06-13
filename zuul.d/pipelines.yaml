@@ -39,11 +39,8 @@
     trigger:
       github:        
         - event: pull_request
-          action:   
-            - labeled
-        - event: pull_request
-          action: labeled
-          label: (?i)^\s*India\s*$
+          action: opened
+          username: ^Deepgit12$
         
     start:
       github:
