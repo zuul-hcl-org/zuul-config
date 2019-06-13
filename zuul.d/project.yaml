@@ -4,3 +4,7 @@
       jobs: []
     gate:
       jobs: []
+    region1:
+      jobs: []
+    region2:
+      jobs: []
