@@ -1,7 +1,7 @@
 - pipeline:
     name: check
     description: |
-      Newly opened pull requests enter this pipeline to receive an
+      check Newly opened pull requests enter this pipeline to receive an
       initial verification test
     manager: independent
     trigger:
@@ -37,7 +37,7 @@
 - pipeline:
     name: region1
     description: |
-      Newly opened pull requests originating from India enter this pipeline to receive an
+      region1 Newly opened pull requests originating from India enter this pipeline to receive an
       initial verification test
     manager: independent
     trigger:
@@ -47,8 +47,7 @@
             - opened
         - event: pull_request
           action: comment
-          comment: (?i)^\s*India\s*$
-        
+          comment: (?i)^\s*India\s*$        
     start:
       github:
         status: pending
@@ -67,7 +66,7 @@
 - pipeline:
     name: region2
     description: |
-      Newly opened pull requests originating from US enter this pipeline to receive an
+      region2 Newly opened pull requests originating from US enter this pipeline to receive an
       initial verification test
     manager: independent
     trigger:
@@ -77,8 +76,7 @@
             - opened
         - event: pull_request
           action: comment
-          comment: (?i)^\s*US\s*$
-        
+          comment: (?i)^\s*US\s*$        
     start:
       github:
         status: pending
