@@ -37,10 +37,13 @@
       initial verification test
     manager: independent
     trigger:
-      github:        
+      github:      
         - event: pull_request
-          action: opened
-          username: ^Deepgit12$
+          action:
+            - opened
+        - event: pull_request
+          action: comment
+          comment: (?i)^\s*India\s*$
         
     start:
       github:
@@ -64,13 +67,13 @@
       initial verification test
     manager: independent
     trigger:
-      github:        
+      github:      
         - event: pull_request
           action:
-            - labeled                                 
+            - opened
         - event: pull_request
           action: comment
-          comment: (?i)^\s*US\s*$
+          comment: (?i)^\s*India\s*$
         
     start:
       github:
