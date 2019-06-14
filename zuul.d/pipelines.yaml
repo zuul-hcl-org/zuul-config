@@ -16,7 +16,8 @@
           comment: (?i)^\s*recheck\s*$
         - event: push
     reporter:
-        label: Region-India
+      github:
+        label
     start:
       github:
         status: pending
