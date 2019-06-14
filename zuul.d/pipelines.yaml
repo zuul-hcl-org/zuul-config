@@ -11,6 +11,7 @@
             - opened
             - changed
             - reopened
+          label: India-Region
         - event: pull_request
           action: comment
           comment: (?i)^\s*recheck\s*$
