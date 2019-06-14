@@ -17,7 +17,8 @@
         - event: push
     reporter:
       github:
-        label
+        - label: Region-India
+        - comment: Location-India
     start:
       github:
         status: pending
