@@ -17,7 +17,6 @@
         - event: push
     reporter:
       github:
-        comment: India
         label: Region-India
     start:
       github:
