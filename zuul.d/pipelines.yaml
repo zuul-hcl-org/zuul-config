@@ -73,7 +73,7 @@
             - opened
         - event: pull_request
           action: comment
-          comment: (?i)^\s*India\s*$
+          comment: (?i)^\s*US\s*$
         
     start:
       github:
