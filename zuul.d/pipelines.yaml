@@ -16,7 +16,6 @@
           comment: (?i)^\s*recheck\s*$
         - event: push
     reporter:
-      github:
         label: Region-India
     start:
       github:
