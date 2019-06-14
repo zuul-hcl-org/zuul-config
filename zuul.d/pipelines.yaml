@@ -15,6 +15,10 @@
           action: comment
           comment: (?i)^\s*recheck\s*$
         - event: push
+    reporter:
+      github:
+        comment: India
+        label: Region-India
     start:
       github:
         status: pending
