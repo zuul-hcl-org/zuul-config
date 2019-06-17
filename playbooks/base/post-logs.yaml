@@ -2,4 +2,4 @@
   gather_facts: False
   roles:
     - role: upload-logs
-      zuul_log_url: "http://52.66.131.23:8000"
+      zuul_log_url: "http://52.66.136.198:8000"
