@@ -56,4 +56,50 @@
         label: 'failed'
       mysql:
 
-      
+- pipeline:
+    name: pullrequest_label
+    description: |
+      check Newly opened pull requests enter to assign a label
+    manager: independent
+    trigger:
+      github:        
+        - event: pull_request
+          action:
+            - opened
+    start:
+      github:
+        status: pending
+        comment: false
+    success:
+      github:
+        status: 'success'
+        label: "{{ tags_available }}"
+      mysql:  
+    failure:
+      github:
+        status: 'failure'
+      mysql:
+
+- pipeline:
+    name: pullrequest_dependent
+    description: |
+      check Newly opened pull requests enter to get the tag and display it
+    manager: independent
+    trigger:
+      github:        
+        - event: pull_request
+          action:
+            - opened
+    start:
+      github:
+        status: pending
+        comment: false
+    success:
+      github:
+        status: 'success'
+      mysql:
+    failure:
+      github:
+        status: 'failure'
+      mysql:
+
