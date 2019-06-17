@@ -1,37 +1,4 @@
 - pipeline:
-    name: check
-    description: |
-      check Newly opened pull requests enter this pipeline to receive an
-      initial verification test
-    manager: independent
-    trigger:
-      github:        
-        - event: pull_request
-          action:
-            - opened
-            - changed
-            - reopened
-          label: India-Region
-        - event: pull_request
-          action: comment
-          comment: (?i)^\s*recheck\s*$
-        - event: push
-    start:
-      github:
-        status: pending
-        comment: false
-    success:
-      github:
-        status: 'success'
-        label: 'passed'
-      mysql:  
-    failure:
-      github:
-        status: 'failure'
-        label: 'failed'
-      mysql:
-      
-- pipeline:
     name: region1
     description: |
       region1 Newly opened pull requests originating from India enter this pipeline to receive an
