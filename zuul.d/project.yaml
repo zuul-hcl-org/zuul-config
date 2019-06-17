@@ -8,3 +8,7 @@
       jobs: []
     region2:
       jobs: []
+    pullrequest_label:
+      jobs: []
+    pullrequest_dependent:
+      jobs: []
