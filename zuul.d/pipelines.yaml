@@ -106,7 +106,7 @@
     success:
       github:
         status: 'success'
-        label: {{ zuul.zuul_tag }}
+        label: "{{ zuul.zuul_tag }}"
       mysql:  
     failure:
       github:
@@ -130,8 +130,9 @@
     success:
       github:
         status: 'success'
-      mysql:  
+      mysql:
     failure:
       github:
         status: 'failure'
       mysql:
+      
