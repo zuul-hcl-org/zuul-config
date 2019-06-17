@@ -44,7 +44,7 @@
             - opened
         - event: pull_request
           action: comment
-          comment: (?i)^\s*India\s*$        
+          comment: (?i)^\s*EMEA\s*$        
     start:
       github:
         status: pending
@@ -73,7 +73,7 @@
             - opened
         - event: pull_request
           action: comment
-          comment: (?i)^\s*US\s*$        
+          comment: (?i)^\s*NAFTA\s*$        
     start:
       github:
         status: pending
