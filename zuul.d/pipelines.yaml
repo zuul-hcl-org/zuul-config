@@ -73,7 +73,7 @@
     success:
       github:
         status: 'success'
-        label: "{{ zuul.zuul_tag }}"
+        label: "{{ tags_available }}"
       mysql:  
     failure:
       github:
