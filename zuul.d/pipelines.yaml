@@ -49,7 +49,7 @@
         status: 'failure'
         label: 'failed'
       mysql:
-	  
+  
 - pipeline:
     name: check_emea
     description: |
@@ -74,7 +74,7 @@
       github:
         status: 'failure'
       mysql:
-	  
+
 - pipeline:
     name: check_nafta
     description: |
