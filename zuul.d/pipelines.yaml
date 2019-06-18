@@ -75,6 +75,7 @@
     failure:
       github:
         status: 'failure'
+        label: 'failed'
       mysql:
 
 - pipeline:
@@ -95,7 +96,7 @@
     success:
       github:
         status: 'success'
-        label: 'read-for-merge'
+        label: 'ready-for-merge'
       mysql:  
     failure:
       github:
