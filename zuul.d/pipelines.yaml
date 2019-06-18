@@ -1,14 +1,11 @@
 - pipeline:
-    name: region1
+    name: regionEMEA
     description: |
-      region1 Newly opened pull requests originating from India enter this pipeline to receive an
+      region1 Newly opened pull requests originating from EMEA enter this pipeline to receive an
       initial verification test
     manager: independent
     trigger:
-      github:      
-        - event: pull_request
-          action:
-            - opened
+      github:
         - event: pull_request
           action: comment
           comment: (?i)^\s*EMEA\s*$        
@@ -28,16 +25,13 @@
       mysql:
 
 - pipeline:
-    name: region2
+    name: regionNAFTA
     description: |
-      region2 Newly opened pull requests originating from US enter this pipeline to receive an
+      region2 Newly opened pull requests originating from NAFTA enter this pipeline to receive an
       initial verification test
     manager: independent
     trigger:
-      github:      
-        - event: pull_request
-          action:
-            - opened
+      github:
         - event: pull_request
           action: comment
           comment: (?i)^\s*NAFTA\s*$        
