@@ -7,6 +7,9 @@
     trigger:
       github:
         - event: pull_request
+          action:
+            - opened
+        - event: pull_request
           action: comment
           comment: (?i)^\s*EMEA\s*$        
     start:
@@ -33,6 +36,9 @@
     trigger:
       github:
         - event: pull_request
+          action:
+            - opened
+        - event: pull_request
           action: comment
           comment: (?i)^\s*NAFTA\s*$        
     start:
@@ -56,7 +62,7 @@
       check Newly opened pull requests enter to assign a label
     manager: independent
     trigger:
-      github:        
+      github: 
         - event: pull_request
           action:
             - opened
@@ -96,4 +102,3 @@
       github:
         status: 'failure'
       mysql:
-
