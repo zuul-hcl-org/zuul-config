@@ -9,6 +9,7 @@
         - event: pull_request
           action:
             - opened
+            - changed
     start:
       github:
         status: pending
@@ -34,7 +35,8 @@
       github:
         - event: pull_request
           action:
-            - opened      
+            - opened
+            - changed
     start:
       github:
         status: pending
