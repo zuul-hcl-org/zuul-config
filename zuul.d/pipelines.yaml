@@ -1,5 +1,5 @@
 - pipeline:
-    name: regionEMEA
+    name: checklabel_emea
     description: |
       region1 Newly opened pull requests originating from EMEA enter this pipeline to receive an
       initial verification test
@@ -9,9 +9,6 @@
         - event: pull_request
           action:
             - opened
-        - event: pull_request
-          action: comment
-          comment: (?i)^\s*EMEA\s*$        
     start:
       github:
         status: pending
@@ -19,7 +16,7 @@
     success:
       github:
         status: 'success'
-        label: 'passed'
+        label: 'emea'
       mysql:  
     failure:
       github:
@@ -28,7 +25,7 @@
       mysql:
 
 - pipeline:
-    name: regionNAFTA
+    name: checklabel_nafta
     description: |
       region2 Newly opened pull requests originating from NAFTA enter this pipeline to receive an
       initial verification test
@@ -37,10 +34,7 @@
       github:
         - event: pull_request
           action:
-            - opened
-        - event: pull_request
-          action: comment
-          comment: (?i)^\s*NAFTA\s*$        
+            - opened      
     start:
       github:
         status: pending
@@ -48,24 +42,25 @@
     success:
       github:
         status: 'success'
-        label: 'passed'
+        label: 'nafta'
       mysql:  
     failure:
       github:
         status: 'failure'
         label: 'failed'
       mysql:
-
+	  
 - pipeline:
-    name: pullrequest_label
+    name: check_emea
     description: |
-      check Newly opened pull requests enter to assign a label
+      region1 Newly opened pull requests originating from EMEA enter this pipeline to receive an
+      initial verification test
     manager: independent
     trigger:
-      github: 
+      github:
         - event: pull_request
-          action:
-            - opened
+          action: labeled
+          label: (?i)^\s*emea\s*$        
     start:
       github:
         status: pending
@@ -73,23 +68,24 @@
     success:
       github:
         status: 'success'
-        label: 'userindia'
+        label: 'ready-for-merge'
       mysql:  
     failure:
       github:
         status: 'failure'
       mysql:
-
+	  
 - pipeline:
-    name: pullrequest_dependent
+    name: check_nafta
     description: |
-      check Newly opened pull requests enter to get the tag and display it
+      region2 Newly opened pull requests originating from NAFTA enter this pipeline to receive an
+      initial verification test
     manager: independent
     trigger:
-      github:        
+       github:
         - event: pull_request
-          action:
-            - opened
+          action: labeled
+          label: (?i)^\s*nafta\s*$        
     start:
       github:
         status: pending
@@ -97,8 +93,10 @@
     success:
       github:
         status: 'success'
-      mysql:
+        label: 'read-for-merge'
+      mysql:  
     failure:
       github:
         status: 'failure'
+        label: 'failed'
       mysql:
