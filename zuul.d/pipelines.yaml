@@ -60,7 +60,7 @@
       github:
         - event: pull_request
           action: labeled
-          label: (?i)^\s*emea\s*$        
+          label: emea       
     start:
       github:
         status: pending
@@ -85,7 +85,7 @@
        github:
         - event: pull_request
           action: labeled
-          label: (?i)^\s*nafta\s*$        
+          label: nafta      
     start:
       github:
         status: pending
