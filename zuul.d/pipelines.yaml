@@ -73,6 +73,7 @@
     success:
       github:
         status: 'success'
+        label: 'userindia'
       mysql:  
     failure:
       github:
