@@ -2,9 +2,9 @@
     name: ^.*$
     gate:
       jobs: []
-    region1:
+    regionEMEA:
       jobs: []
-    region2:
+    regionNAFTA:
       jobs: []
     pullrequest_label:
       jobs: []
