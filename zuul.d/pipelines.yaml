@@ -19,11 +19,6 @@
         status: 'success'
         label: 'emea'
       mysql:  
-    failure:
-      github:
-        status: 'failure'
-        label: 'failed'
-      mysql:
 
 - pipeline:
     name: checklabel_nafta
@@ -46,11 +41,6 @@
         status: 'success'
         label: 'nafta'
       mysql:  
-    failure:
-      github:
-        status: 'failure'
-        label: 'failed'
-      mysql:
   
 - pipeline:
     name: check_emea
