@@ -2,4 +2,4 @@
   gather_facts: False
   roles:
     - role: upload-logs
-      zuul_log_url: "http://zuul-205071000.ap-south-1.elb.amazonaws.com:8000"
+      zuul_log_url: "http://52.66.200.85:8000"
