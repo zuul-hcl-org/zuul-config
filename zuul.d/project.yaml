@@ -10,5 +10,8 @@
       jobs: []
     check_nafta:
       jobs: []
+
+- project:
+    name: zuul-hcl-org/fca-project
     pullrequest_label:
       jobs: []
