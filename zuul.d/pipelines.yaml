@@ -93,3 +93,29 @@
         status: 'failure'
         label: 'failed'
       mysql:
+      
+- pipeline:
+    name: pullrequest_label
+    description: |
+      fca-project test to return the label
+    manager: independent
+    trigger:
+      github:
+        - event: pull_request
+          action:
+            - opened
+            - changed
+    start:
+      github:
+        status: pending
+        comment: false
+    success:
+      github:
+        status: 'success'
+        label: 'merge-ready'
+      mysql:
+    failure:
+      github:
+        status: 'failure'
+        label: 'merge-not-ready'
+      mysql:
