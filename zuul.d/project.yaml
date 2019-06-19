@@ -12,6 +12,6 @@
       jobs: []
 
 - project:
-    name: zuul-hcl-org/fca-project
+    name: fca-project
     pullrequest_label:
       jobs: []
