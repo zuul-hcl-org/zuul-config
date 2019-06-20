@@ -102,18 +102,3 @@
         label: 'failed'
       mysql:
       
-- pipeline:
-    name: gate
-    description: |
-       scheduled on a timer basis for pull requests which have been closed post merge
-    manager: dependent   
-    trigger:
-#      github:
-#       - event: pull request
-#         action: closed
-      timer:
-        - time: '45 12 * * *'           
-    success:
-      mysql:
-    failure:
-      mysql:
