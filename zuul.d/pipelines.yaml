@@ -130,4 +130,44 @@
         label: 'failed'
       mysql:
       
-
+- pipeline:
+    name: merge
+    description: |
+       pull requests originating from NAFTA,  enter this pipeline to merge into master  
+    manager: independent
+    trigger:
+       github:
+        - event: pull_request
+          action: labeled
+          label: ready-for-merge
+    start:
+      github:
+        status: pending
+        comment: false
+    success:
+      github:
+        status: 'success'
+        merge: true
+        label: 'merged'
+      mysql:  
+    failure:
+      github:
+        status: 'failure'
+        label: 'failed'
+      mysql: 
+      
+- pipeline:
+    name: gate
+    description: |
+       merged code scheduled on a daily basis
+    require:
+      github:
+        label: 'merged'          
+    manager: independent
+    trigger:
+      timer:
+        - time: '*/5 * * * *'
+    success:
+      mysql:
+    failure:
+      mysql:     
