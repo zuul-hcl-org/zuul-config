@@ -49,9 +49,7 @@
       github:
         status: 'success'
       mysql:
-        
-    
-
+       
 - pipeline:
     name: checklabel_nafta
     description: |
