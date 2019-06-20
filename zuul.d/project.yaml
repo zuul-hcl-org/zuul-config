@@ -10,7 +10,7 @@
       jobs: []
     check_nafta:
       jobs: []
-    pullrequest_label:
-      jobs: []
-    merge:
-      jobs: []
+ #   pullrequest_label:
+ #     jobs: []
+ #   merge:
+ #     jobs: []
