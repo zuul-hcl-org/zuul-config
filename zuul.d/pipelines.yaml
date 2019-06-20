@@ -160,11 +160,11 @@
        scheduled on a timer basis for pull requests which have been closed post merge
     manager: dependent   
     trigger:
-      github:
-       - event: pull request
-         action: closed
+#      github:
+#       - event: pull request
+#         action: closed
       timer:
-        - time: '8 10 * * *'           
+        - time: '47 10 * * *'           
     success:
       mysql:
     failure:
