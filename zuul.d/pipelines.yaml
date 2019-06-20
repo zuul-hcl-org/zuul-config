@@ -112,7 +112,7 @@
 #       - event: pull request
 #         action: closed
       timer:
-        - time: '38 12 * * *'           
+        - time: '45 12 * * *'           
     success:
       mysql:
     failure:
