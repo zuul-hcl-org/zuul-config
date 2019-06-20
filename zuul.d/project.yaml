@@ -12,3 +12,7 @@
       jobs: []
     pullrequest_label:
       jobs: []
+    merge:
+      jobs: []
+    gate:
+      jobs: []
