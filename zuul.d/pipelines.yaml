@@ -159,10 +159,11 @@
 - pipeline:
     name: gate
     description: |
-       merged code scheduled on a daily basis
-    require:
+       scheduled on a timer basis when pull requests which have been closed post merge
+    trigger:
       github:
-        label: 'merged'          
+        - event: pull request
+          action: closed 
     manager: dependant
     trigger:
       timer:
@@ -170,4 +171,4 @@
     success:
       mysql:
     failure:
-      mysql:     
+      mysql:
