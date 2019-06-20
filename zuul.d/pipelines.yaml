@@ -157,7 +157,7 @@
 - pipeline:
     name: gate
     description: |
-       scheduled on a timer basis when pull requests which have been closed post merge
+       scheduled on a timer basis for pull requests which have been closed post merge
     manager: dependant   
     trigger:
       timer:
