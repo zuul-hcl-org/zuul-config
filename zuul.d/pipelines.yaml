@@ -160,11 +160,7 @@
     name: gate
     description: |
        scheduled on a timer basis when pull requests which have been closed post merge
-    trigger:
-      github:
-        - event: pull request
-          action: closed 
-    manager: dependant
+    manager: dependant   
     trigger:
       timer:
         - time: '*/5 * * * *'
