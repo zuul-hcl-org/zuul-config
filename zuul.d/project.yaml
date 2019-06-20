@@ -14,5 +14,3 @@
       jobs: []
     merge:
       jobs: []
-    gate:
-      jobs: []
