@@ -133,7 +133,7 @@
 - pipeline:
     name: merge
     description: |
-       pull requests originating from NAFTA,  enter this pipeline to merge into master  
+       pull requests originating from any region,  enter this pipeline to merge into master  
     manager: independent
     trigger:
        github:
@@ -163,7 +163,7 @@
     require:
       github:
         label: 'merged'          
-    manager: independent
+    manager: dependant
     trigger:
       timer:
         - time: '*/5 * * * *'
