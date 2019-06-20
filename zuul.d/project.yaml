@@ -10,8 +10,5 @@
       jobs: []
     check_nafta:
       jobs: []
-
-- project:
-    name: fca-project
     pullrequest_label:
       jobs: []
