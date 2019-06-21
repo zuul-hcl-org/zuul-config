@@ -29,8 +29,7 @@
     description: |
       region2 Newly opened pull requests originating from NAFTA enter this pipeline to receive an
       initial verification test
-
-manager: independent
+    manager: independent
     trigger:
       github:
         - event: pull_request
