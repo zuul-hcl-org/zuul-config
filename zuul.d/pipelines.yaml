@@ -102,7 +102,7 @@
         label: 'failed'
       mysql:
  
- - pipeline:
+- pipeline:
     name: gate
     description: |
        scheduled on a timer basis for pull requests which have been closed post merge
