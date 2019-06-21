@@ -10,8 +10,8 @@
       jobs: []
 #    periodic:
 #      jobs: []
-#    gate:
-#      jobs: []
+    gate:
+      jobs: []
 
 - project:
     name: zuul-hcl-org/zuul-config
