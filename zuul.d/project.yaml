@@ -11,4 +11,13 @@
     check_nafta:
       jobs: []
 
+- project:
+    name: zuul-config
+    check:
+      jobs:
+        - noop
+    gate:
+      jobs:
+        - noop
+
 
