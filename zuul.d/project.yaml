@@ -1,7 +1,5 @@
 - project:
     name: ^.*$
-    gate:
-      jobs: []
     checklabel_emea:
       jobs: []
     checklabel_nafta:
@@ -19,5 +17,3 @@
     gate:
       jobs:
         - noop
-
-
