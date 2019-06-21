@@ -29,7 +29,8 @@
     description: |
       region2 Newly opened pull requests originating from NAFTA enter this pipeline to receive an
       initial verification test
-    manager: independent
+
+manager: independent
     trigger:
       github:
         - event: pull_request
@@ -101,4 +102,19 @@
         status: 'failure'
         label: 'failed'
       mysql:
-      
+ 
+ - pipeline:
+    name: gate
+    description: |
+       scheduled on a timer basis for pull requests which have been closed post merge
+    manager: dependent   
+    trigger:
+#      github:
+#       - event: pull request
+#         action: closed
+      timer:
+        - time: '45 12 * * *'           
+    success:
+      mysql:
+    failure:
+      mysql:
