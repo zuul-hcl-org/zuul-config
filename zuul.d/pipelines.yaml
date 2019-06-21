@@ -108,9 +108,9 @@
        scheduled on a timer basis for pull requests which have been closed post merge
     manager: independent   
     trigger:
-      github:
-       - event: pull request
-         action: closed
+#      github:
+#       - event: pull request
+#         action: closed
       timer:
         - time: '* * * * *'           
     success:
