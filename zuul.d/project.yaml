@@ -8,16 +8,16 @@
       jobs: []
     check_nafta:
       jobs: []
-    periodic:
-      jobs: []
-    gate:
-      jobs: []
+#    periodic:
+#      jobs: []
+#    gate:
+#      jobs: []
 
 - project:
     name: zuul-hcl-org/zuul-config
     check:
       jobs:
         - noop
-    gate:
-      jobs:
-        - noop
+ #   gate:
+ #     jobs:
+ #      - noop
