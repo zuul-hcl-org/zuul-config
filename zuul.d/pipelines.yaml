@@ -103,10 +103,10 @@
       mysql:
  
 - pipeline:
-    name: gate
+    name: periodic
     description: |
        scheduled on a timer basis for pull requests which have been closed post merge
-    manager: dependent   
+    manager: independent   
     trigger:
 #      github:
 #       - event: pull request
