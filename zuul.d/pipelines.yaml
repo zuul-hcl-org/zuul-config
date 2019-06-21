@@ -102,18 +102,18 @@
         label: 'failed'
       mysql:
  
-#- pipeline:
-#    name: periodic
-#    description: |
-#       scheduled on a timer basis for pull requests which have been closed post merge
-#    manager: independent   
-#    trigger:
-#      github:
-#       - event: pull request
-#         action: closed
-#      timer:
-#        - time: '* * * * *'           
-#    success:
-#      mysql:
-#    failure:
-#      mysql:
+- pipeline:
+    name: gate
+    description: |
+       scheduled on a timer basis for pull requests which have been closed post merge
+    manager: independent   
+    trigger:
+      github:
+       - event: pull request
+         action: closed
+      timer:
+        - time: '* * * * *'           
+    success:
+      mysql:
+    failure:
+      mysql:
