@@ -117,3 +117,29 @@
       mysql:
     failure:
       mysql:
+
+- pipeline:
+    name: check_nafta_cpjt
+    description: |
+      region2 Newly opened pull requests originating from NAFTA enter this pipeline to receive an
+      initial verification test
+    manager: independent
+    trigger:
+       github:
+        - event: pull_request
+          action: labeled
+          label: nafta      
+    start:
+      github:
+        status: pending
+        comment: false
+    success:
+      github:
+        status: 'success'
+        label: 'ready-for-merge'
+      mysql:  
+    failure:
+      github:
+        status: 'failure'
+        label: 'failed'
+      mysql:
