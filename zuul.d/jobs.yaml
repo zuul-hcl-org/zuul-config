@@ -18,5 +18,5 @@
     timeout: 1800
     nodeset:
       nodes:
-        - name: centos76
-          label: centos76
+        - name: node1
+          label: centos1
