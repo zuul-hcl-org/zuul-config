@@ -128,7 +128,7 @@
        github:
         - event: pull_request
           action: labeled
-          label: nafta      
+          label: emea      
     start:
       github:
         status: pending
