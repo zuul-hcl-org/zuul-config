@@ -24,6 +24,33 @@
       mysql:
       
 - pipeline:
+    name: checklabel_both
+    description: |
+      region1 Newly opened pull requests originating from EMEA enter this pipeline to receive an
+      initial verification test
+    manager: independent
+    trigger:
+      github:
+        - event: pull_request
+          action:
+            - opened
+            - changed
+    start:
+      github:
+        status: pending
+        comment: false
+    success:
+      github:
+        status: 'success'
+        label: 'emea'
+        label: 'nafta'
+      mysql:
+    failure:
+      github:
+        status: 'success'
+      mysql:      
+      
+- pipeline:
     name: checklabel_emea
     description: |
       region1 Newly opened pull requests originating from EMEA enter this pipeline to receive an
