@@ -10,7 +10,7 @@
       jobs: []
 #    periodic:
 #      jobs: []
-     check_nafta_cpjt:
+    check_nafta_cpjt:
        jobs: []
 #    gate:
 #      jobs: []
