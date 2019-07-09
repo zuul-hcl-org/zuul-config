@@ -12,7 +12,9 @@
 #      jobs: []
      check_nafta_cpjt:
        jobs: []
-    gate:
+#    gate:
+#      jobs: []
+    sparkbuildjob_shared:
       jobs: []
 
 - project:
