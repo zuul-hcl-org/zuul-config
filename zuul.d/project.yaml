@@ -1,5 +1,9 @@
 - project:
     name: ^.*$
+    sparkbuildjob_shared:
+      jobs: []
+    checklabel_both:
+      jobs: []
     checklabel_emea:
       jobs: []
     checklabel_nafta:
@@ -14,8 +18,7 @@
        jobs: []
 #    gate:
 #      jobs: []
-    sparkbuildjob_shared:
-      jobs: []
+    
 
 - project:
     name: zuul-hcl-org/zuul-config
