@@ -43,6 +43,8 @@
       github:
         status: 'success'
         label: 'emea'
+      mysql:  
+    success:    
       github:
         status: 'success'
         label: 'nafta'
