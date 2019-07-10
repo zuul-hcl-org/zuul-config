@@ -49,6 +49,7 @@
     failure:
       github:
         status: 'failure'
+        label: 'temporary'
       mysql:
          
 - pipeline:
