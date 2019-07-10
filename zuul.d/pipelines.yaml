@@ -47,6 +47,8 @@
           - 'nafta'
       mysql:  
     failure:
+      github:
+        status: 'failure'
       mysql:
          
 - pipeline:
@@ -124,8 +126,8 @@
 #    failure:
 #      github:
 #        status: 'failure'
-        label: 'failed'
-      mysql:      
+#        label: 'failed'
+#      mysql:      
   
 - pipeline:
     name: check_emea
