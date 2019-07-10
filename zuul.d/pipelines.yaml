@@ -47,9 +47,9 @@
           - 'nafta'
       mysql:  
     failure:
-      label:  
       github:
-        status: 'success'
+        status: 'failure'
+        label: 'temporary'
       mysql:
          
 - pipeline:
