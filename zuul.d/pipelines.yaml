@@ -48,7 +48,7 @@
       mysql:  
     failure:
       github:
-        status: 'failure'
+        status: 'success'
       mysql:
          
 - pipeline:
