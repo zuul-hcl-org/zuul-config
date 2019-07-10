@@ -100,6 +100,32 @@
       github:
         status: 'success'
       mysql:
+      
+- pipeline:
+    name: check_both
+    description: |
+      region1 Newly opened pull requests originating from EMEA enter this pipeline to receive an
+      initial verification test
+    manager: independent
+    trigger:
+      github:
+        - event: pull_request
+          action: labeled
+          label: emea_nafta       
+    start:
+      github:
+        status: pending
+        comment: false
+    success:
+      github:
+        status: 'success'
+        label: 'ready-for-merge'
+      mysql:  
+    failure:
+      github:
+        status: 'failure'
+        label: 'failed'
+      mysql:      
   
 - pipeline:
     name: check_emea
