@@ -7,9 +7,10 @@
     trigger:
       github:
         - event: pull_request
-          action:
-            - opened
-            - changed
+          action: labeled
+          label: 
+            - nafta
+            - emea
     start:
       github:
         status: pending
