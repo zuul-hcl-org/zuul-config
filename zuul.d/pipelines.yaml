@@ -10,7 +10,7 @@
           action: labeled
           label: 
             - shared
-     start:
+    start:
       github:
         status: pending
         comment: false
