@@ -9,9 +9,8 @@
         - event: pull_request
           action: labeled
           label: 
-            - nafta
-            - emea
-    start:
+            - shared
+     start:
       github:
         status: pending
         comment: false
@@ -79,7 +78,34 @@
       github:
         status: 'success'
       mysql:
-       
+
+- pipeline:
+    name: checklabel_shared
+    description: |
+      region1 Newly opened pull requests originating from EMEA enter this pipeline to receive an
+      initial verification test
+    manager: independent
+    trigger:
+      github:
+        - event: pull_request
+          action: labeled
+          label: temporary
+        
+    start:
+      github:
+        status: pending
+        comment: false
+    success:
+      github:
+        status: 'success'
+        label: 'shared'
+        unlabel: 'temporary'
+      mysql:
+    failure:
+      github:
+        status: 'success'
+      mysql:
+      
 - pipeline:
     name: checklabel_nafta
     description: |
