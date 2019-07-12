@@ -151,7 +151,7 @@
       github:
         status: 'success'
         label: 'nafta'
-     mysql:
+      mysql:
     failure:
       github:
         status: 'success'
