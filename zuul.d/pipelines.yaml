@@ -72,7 +72,6 @@
       github:
         status: 'success'
         label: 'emea'
-        unlabel: 'temporary'
       mysql:
     failure:
       github:
@@ -153,8 +152,7 @@
       github:
         status: 'success'
         label: 'nafta'
-        unlabel: 'temporary'
-      mysql:
+     mysql:
     failure:
       github:
         status: 'success'
