@@ -114,7 +114,7 @@
       github:
         - event: pull_request
           action: labeled
-          label: temporary
+          label: 'temporary'
         
     start:
       github:
