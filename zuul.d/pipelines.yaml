@@ -288,7 +288,7 @@
         - event: pull_request
           action: 
             - opened
-            - changeg 
+            - changed
     start:
       github:
         status: pending
