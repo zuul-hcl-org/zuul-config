@@ -286,8 +286,9 @@
     trigger:
        github:
         - event: pull_request
-          action: labeled
-          label: emea      
+          action: 
+            - opened
+            - changeg 
     start:
       github:
         status: pending
